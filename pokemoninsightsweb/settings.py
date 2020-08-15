@@ -24,7 +24,7 @@ APP_DIR = ROOT_DIR / "app"
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@0nd1-w0)%m=&vubzvng(3+*0e0vqnak19-1cx(g+@0uo4b9oq'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
