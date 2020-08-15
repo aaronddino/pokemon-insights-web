@@ -1,0 +1,9 @@
+.header-bar {
+    background-color: #FFFFFE;
+    border-bottom: 15px solid #E12345;
+}
+
+.footer-bar {
+    background-color: #FFFFFE;
+    border-top: 15px solid #E12345;
+}

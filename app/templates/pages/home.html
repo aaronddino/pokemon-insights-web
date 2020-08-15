@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block headerbar %}
+<h1>Welcome to Pokemon Insights</h1>
+{% endblock headerbar %}
+{% block content %}
+<p>This site allows you to view insights on the available data for pokemon, through available public APIs.</p>
+<div>
+    <form method="POST" >
+        {% csrf_token %}
+        <div>
+            <label>
+                <!--Search-->
+                Type the pokemon you want insights for:
+            </label>
+            <input>
+        </div>
+    </form>
+</div>
+{% endblock content%}
