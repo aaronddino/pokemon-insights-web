@@ -4,7 +4,7 @@
 {% endblock headerbar %}
 {% block content %}
 <p>This site allows you to view insights on the available data for pokemon, through available public APIs.</p>
-<div>
+<div class="centre">
     <form method="POST" >
         {% csrf_token %}
         <div>
@@ -12,8 +12,14 @@
                 <!--Search-->
                 Type the pokemon you want insights for:
             </label>
-            <input>
+            <input name='searched_pokemon'>
         </div>
     </form>
+</div>
+<div>
+    <p class="centre">{{pokemon_name}} #{{id}}</p>
+    <div><img class="img_frame" src="{{image}}"></div>
+    <p class="centre">Type: {{type}}</p>
+    <p>{{summary}}</p>
 </div>
 {% endblock content%}
