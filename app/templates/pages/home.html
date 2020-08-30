@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block headerbar %}
+<h1>Welcome to Pokemon Insights</h1>
+{% endblock headerbar %}
+{% block content %}
+<p class="text-body">This site allows you to view insights on the available data for pokemon, through available public APIs.</p>
+<div class="centre">
+    <form method="POST" >
+        {% csrf_token %}
+        <div>
+            <label>
+                <!--Search-->
+                Type the pokemon you want insights for:
+            </label>
+            <input name='searched_pokemon'>
+        </div>
+    </form>
+</div>
+<div>
+    <h3 class="centre">{{pokemon_name}} #{{id}}</h3>
+    <div><img class="img-frame" src="{{image}}"></div>
+    <p class="centre">Type: {{type}}</p>
+    <h5 class='text-body'>Description:</h5>
+    <div class="text-body">
+        <p>{{summary}}</p>
+    </div>
+</div>
+{% endblock content%}
