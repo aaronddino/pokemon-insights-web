@@ -3,7 +3,7 @@
 <h1>Welcome to Pokemon Insights</h1>
 {% endblock headerbar %}
 {% block content %}
-<p>This site allows you to view insights on the available data for pokemon, through available public APIs.</p>
+<p class="text-body">This site allows you to view insights on the available data for pokemon, through available public APIs.</p>
 <div class="centre">
     <form method="POST" >
         {% csrf_token %}
@@ -17,9 +17,12 @@
     </form>
 </div>
 <div>
-    <p class="centre">{{pokemon_name}} #{{id}}</p>
-    <div><img class="img_frame" src="{{image}}"></div>
+    <h3 class="centre">{{pokemon_name}} #{{id}}</h3>
+    <div><img class="img-frame" src="{{image}}"></div>
     <p class="centre">Type: {{type}}</p>
-    <p>{{summary}}</p>
+    <h5 class='text-body'>Description:</h5>
+    <div class="text-body">
+        <p>{{summary}}</p>
+    </div>
 </div>
 {% endblock content%}
